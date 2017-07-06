@@ -1,5 +1,3 @@
-// When the user presses the .submit button, add an .error class to both input elements
-// When the user puts their cursor in one of the input fields, remove the .error class
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -19,7 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
   submit.addEventListener('click', function(e){
     input[0].className = 'error';
     input[1].className = 'error';
-
   });
+
+  input[0].addEventListener('click', function(e) {
+    this.className = null;
+  })
+  input[1].addEventListener('click', function(e) {
+    this.className = null;
+  })
 
 });
