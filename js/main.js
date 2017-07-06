@@ -1,6 +1,12 @@
-var secondLevel =  document.querySelector('#second-level');
 
-  secondLevel.addEventListener('click', function(e) {
-    e.stopPropagation();
-    window.alert('#second-level received click event!');
+document.addEventListener('DOMContentLoaded', function() {
+
+  var signIn = document.querySelector('.signin');
+  var closeButton = document.querySelector('.close');
+  var modalWindow = document.querySelector('.modal');
+
+  signIn.addEventListener('click', function(e){
+    modalWindow.style.display = 'block';
   });
+
+});
